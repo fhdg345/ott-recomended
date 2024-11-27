@@ -1,0 +1,28 @@
+<svg width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .text {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 9.5rem;
+            font-weight: bold;
+            fill: #FFD700; /* 글자 색상 */
+            stroke: #000000; /* 첫 번째 외곽선 (검정색) */
+            stroke-width: 0.5rem;
+            }
+
+            .outer-stroke {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 9.5rem;
+            font-weight: bold;
+            fill: none; /* 외곽선만 보이게 하기 위해 채우기 없음 */
+            stroke: #D2D2D2; /* 두 번째 외곽선 (#D2D2D2) */
+            stroke-width: 1.1rem; /* 두 번째 외곽선 두께 */
+            }
+        </style>
+    </defs>
+
+    <!-- 두 번째 외곽선을 먼저 그리기 -->
+    <text x="50" y="200" class="outer-stroke">GeniePick</text>
+    <!-- 첫 번째 외곽선과 텍스트 그리기 -->
+    <text x="50" y="200" class="text">GeniePick</text>
+</svg>

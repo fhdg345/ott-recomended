@@ -1,0 +1,40 @@
+https://github.com/codestates-seb/seb44_main_003
+
+
+
+https://www.figma.com/file/aywiih2fn0y2nqs1wXJmqP/ Main-Project?type=design&node-id=10-1277&mode=design&t=zDSPE0jp7PVuP4lz-0
+
+
+
+//https://hub.docker.com/_/elasticsearch/tags
+1. Elasticsearch 설치
+$ docker pull elasticsearch:7.17.24
+$ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.17.24
+
+
+다음 실행
+$ docker start elasticsearch
+
+설명
+docker run: 새로운 컨테이너를 실행하는 명령어입니다.
+-d: 컨테이너를 백그라운드에서 실행하도록 지정합니다.
+--name elasticsearch: 컨테이너의 이름을 elasticsearch로 지정합니다.
+-p 9200:9200: 호스트의 9200 포트를 컨테이너의 9200 포트에 매핑합니다. 이 포트는 Elasticsearch의 REST API에 접근하는 데 사용됩니다.
+-p 9300:9300: 호스트의 9300 포트를 컨테이너의 9300 포트에 매핑합니다. 이 포트는 클러스터 통신에 사용됩니다.
+-e "discovery.type=single-node": 단일 노드로 실행하도록 Elasticsearch에 지시합니다.
+
+
+2. 실행 확인하기
+Elasticsearch가 정상적으로 실행되었는지 확인하려면 웹 브라우저를 열고 다음 URL에 접속해 보세요:
+
+arduino
+코드 복사
+http://localhost:9200
+
+
+
+
+
+
+
+

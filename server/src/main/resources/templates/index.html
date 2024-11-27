@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샘플 웹 사이트</title>
+</head>
+<body>
+<h1>환영합니다!</h1>
+<form id="myForm">
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">제출</button>
+</form>
+<div id="greeting" style="display: none;"></div>
+
+<script>
+    document.getElementById('myForm').onsubmit = function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        document.getElementById('greeting').innerText = `안녕하세요, ${name}님!`;
+        document.getElementById('greeting').style.display = 'block';
+    };
+</script>
+</body>
+</html>
